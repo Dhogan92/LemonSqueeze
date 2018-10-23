@@ -1,12 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Teko');
+
+body {
+  background-color: #fff44f;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+a:hover {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
 .App {
   text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: 'Teko', sans-serif;
+  background-color: #fff44f;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+#lemon-logo {
+	color: #fff44f;
 }
 
+#popular-container {
+  margin-top: 25px;
+}
+
+#jumbotron {
+}
+
+
+
+#search-container {
+  height: 80px;
+  background-color: #e9ecef
+}
+
+#search-form {
+  position: relative;
+  bottom: 15px;
+}
+.movie-img-results {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+	max-width: 100%;
+  color: black;
+  max-height: 400px;
+	height: 335px;
+	transition: 0.3s;
+  background-color: #fff44f;
+  margin: 65px 30px;
+}
+
+
+.movie-img-results:hover {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.8);
+}
+
+#navigation-container {
+  height: 50px;
+}
+.navbar{
+  border: none !important;
+}
+
+
+
+
+.movie-img {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+	max-width: 100%;
+	color: black;
+	height: 150px;
+	transition: 0.3s;
+  background-color: #fff44f;
+  margin: 50px 20px;
+ 
+
+}
+.movie-img:hover {
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+#search-logo, #reset-logo {
+	color: black;
+	font-size: 10px;
+}
+
+input:focus {
+	outline: none;
+
+}
+
+/* SEARCH INPUT BOX */
+#movie-title {
+  height: 25px;
+	border: none;
+	width: 230px;
+	border-radius: 2px;
+	padding-left: 5px;
+	
+}
+
+#search-btn, #reset-btn {
+	border: 1px;
+	outline: none;
+	color: black;
+	background-color: #fff44f;
+	
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,11 +132,43 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* FOOTER SECTION */
+
+footer {
+  position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    top: 10px;
+
+    text-align: center;
 }
+
+#footer-title {
+  font-size: 7px;
+}
+
+#api-logo {
+  padding-right: 8px;
+  height: 10px;
+  margin-bottom: 3px;
+}
+
+.bs-icon {
+  opacity: .8;
+  font-size: 13px;
+  padding-right: 8px;
+}
+
+.node-icon {
+  font-size: 18px;
+  padding-right: 8px;
+}
+
+
+
+.babel-icon {
+  padding-right: 8px;
+  
+}
+
