@@ -9,7 +9,8 @@ export default class Pop extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        movies: []
+        movies: [],
+        didMount: false,
       };
       this.popularRequest = this.popularRequest.bind(this);
     }
@@ -30,24 +31,37 @@ export default class Pop extends React.Component {
         var obj = JSON.parse(xhr.responseText);
         
         this.setState({
-          movies: obj.results
+          movies: obj.results,
+          didMount: true,
         })
       }
     }
-  
+    
     render() {
+      let ready = this.state.didMount;
+      if (ready === false) {
+          return (
+              <div class="App-logo"></div>
+          )
+      }
         return (
           <div>
-            <Router>
+           
             <div id="popular-container">
             <h2>Trending</h2>
               {this.state.movies.slice(0, 18).map((movie, index) =>(
-              <Link to ={`/`}>
+              <Link to ={{
+                pathname: `/movie/${movie.id}`,
+                state: {
+                  didMount: true,
+                  movies: movie.title,
+                  id: movie.id,
+                }
+            }}>
               <img key={index} className="movie-img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Movie Poster"/>
               </Link>
               ))}
             </div>
-            </Router>
           </div>
         );
       
