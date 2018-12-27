@@ -42,3 +42,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## API KEY
+
+You must visit (https://developers.themoviedb.org/3/getting-started/introduction) to create your API Key which you then use as an environmental variable named 'REACT_APP_API_KEY'
