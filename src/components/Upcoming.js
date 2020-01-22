@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 var xhr;
 const API_KEY = process.env.REACT_APP_API_KEY; 
-const Url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;
+const Url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`;
 
-export default class Pop extends React.Component {
+export default class Upcoming extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -46,7 +46,7 @@ export default class Pop extends React.Component {
       }
         return (
             <div id="movies-container">
-            <h2>Trending</h2>
+            <h2>Upcoming</h2>
               {this.state.movies.slice(0, 18).map((movie, index) =>(
               <Link to ={{
                 pathname: `/movie/${movie.id}`,

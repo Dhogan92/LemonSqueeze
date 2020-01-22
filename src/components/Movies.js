@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Link, Route } from "react-router-dom";
+
 
 
 class Movies extends React.Component {

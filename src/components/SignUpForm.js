@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+
 class SignUpForm extends Component {
     constructor() {
         super();
@@ -31,6 +32,7 @@ class SignUpForm extends Component {
     handleSubmit(e) {
         e.preventDefault();
         // SAVE SUBMITTED DATA ON SERVER HERE //
+       
 
         console.log("The Form was submitted with this data: ")
         console.log(this.state);

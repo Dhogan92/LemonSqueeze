@@ -2,8 +2,7 @@ import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLemon, faUser, faSearch, faRedo } from '@fortawesome/free-solid-svg-icons';
-import {BrowserRouter as Router, Link } from 'react-router-dom';
-import Movies from './Movies';
+import { Link } from 'react-router-dom';
 library.add(faLemon, faUser, faSearch, faRedo)
 var xhr;
 

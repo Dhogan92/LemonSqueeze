@@ -86,13 +86,10 @@ a:link {
 
 .movie-ovrvw {
   text-align: center;
-  padding: 30px;
+  padding: 25px;
   font-size: 18px;
 }
 
-.movie-ovrvw > a {
-  
-}
 
 .xtnrl-lnk {
   color: black;
@@ -140,11 +137,15 @@ hr {
   width: 50px;
 }
 
+#starRating {
+  font-size: 20px;
+}
+
 .sgl-movie-img{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 	max-width: 100%;
 	color: black;
-	width: 250px;
+	width: 280px;
 	transition: 0.3s;
   background-color: #fff44f;
   margin: 10px auto;

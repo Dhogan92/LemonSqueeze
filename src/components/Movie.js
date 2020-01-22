@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import SimilarMovie from './SimilarMovie';
-import { Link, Route } from "react-router-dom";
 import { Row, Col, Grid } from 'react-bootstrap';
-import { Transition } from 'react-transition-group';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import VideoTrailer from './VideoTrailer';
+import StarRating from './StarRating';
 library.add(faSpinner, faArrowAltCircleLeft)
 
     
@@ -29,15 +28,15 @@ class Movie extends Component {
         .then(data => 
             this.setState({ 
                 didMount: true,
-                activeMovie: data
-              })
+                activeMovie: data,
+                id: id,
+            })
         )
     }
 
     goBack() {
         this.props.history.goBack();
     }
-    
 
     render() {
         let ready = this.state.didMount;
@@ -46,11 +45,12 @@ class Movie extends Component {
                 <div class="App-logo"></div>
             )
         }
+
         let sglMovie = this.state.activeMovie;
-        console.log(sglMovie);
+        console.log(sglMovie)
+        let id = this.state.id
         return (
-         
-               
+
             <Grid fluid>
                  <FontAwesomeIcon onClick={this.goBack} icon="arrow-alt-circle-left" className="back-logo" alt="logo" />
                 <Row className="show-grid">
@@ -59,33 +59,39 @@ class Movie extends Component {
                        
                         <img className="sgl-movie-img" src={`https://image.tmdb.org/t/p/w500/${sglMovie.poster_path}`} alt="Movie Poster Missing"/>
                         <p>"{sglMovie.tagline}"</p>
+                        <StarRating starRating={sglMovie.vote_average} />
                     </Col>
 
                     <Col className="cntnr-rt" sm={8}>
                         <Row around="xs">
-                            <Col className="stats" xs={4}>
+                            <Col className="stats" xs={6}>
                                 <h2 className="mve-stats-title">POPULARITY: </h2>
                                 <p className="mve-stats">{sglMovie.popularity}</p>
                             </Col>
 
-                            <Col className="stats" xs={4}>
+                            <Col className="stats" xs={6}>
                                 <h2 className="mve-stats-title">VOTES: </h2>
                                 <p className="mve-stats">{sglMovie.vote_count}</p>
                             </Col>
 
-                            <Col className="stats" xs={4}>
-                                <h2 className="mve-stats-title">AVG: </h2>
-                                <p className="mve-stats">{sglMovie.vote_average}</p>
+                            
+                        </Row>
+                        <Row>
+                            <Col xs={12}>
+                            <div className="movie-ovrvw">
+                                <p>{sglMovie.overview}</p>
+                                <hr className="divdr"></hr>
+                                <VideoTrailer idNum={id}/>
+                            </div>
                             </Col>
                         </Row>
                         <Row>
                             <Col xs={12}>
-                                <div className="movie-ovrvw">
-                                    <p>{sglMovie.overview}</p>
-                                    <hr className="divdr"></hr>
-                                    <p className="run-time-txt">Runtime: {sglMovie.runtime} mins</p>
-                                </div>
-                                <a className="xtnrl-lnk" target="blank" href={sglMovie.homepage}>{sglMovie.homepage}</a>
+                            <a className="xtnrl-lnk" target="blank" href={sglMovie.homepage}>{sglMovie.homepage}</a>
+                            <hr className="divdr"></hr>
+                            <p className="run-time-txt">Runtime: {sglMovie.runtime} mins</p>
+                           
+                               
                             </Col>
                         </Row>
                     </Col>
