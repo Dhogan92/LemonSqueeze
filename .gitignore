@@ -2,8 +2,11 @@
 
 # dependencies
 /node_modules
+<<<<<<< HEAD
 /.pnp
 .pnp.js
+=======
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
 
 # testing
 /coverage
@@ -13,7 +16,14 @@
 
 # misc
 .DS_Store
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
+>>>>>>> 35d1bb8c3aa7912b3318bcacaeaeb2fbe88a7d6a
 .env.local
 .env.development.local
 .env.test.local
@@ -22,4 +32,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 
+=======
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7

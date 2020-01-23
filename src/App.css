@@ -65,7 +65,11 @@ a:link {
   color: #fff44f;
 }
 
+<<<<<<< HEAD
 #movies-container {
+=======
+#popular-container {
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
   margin-top: 25px;
 }
 
@@ -86,6 +90,7 @@ a:link {
 
 .movie-ovrvw {
   text-align: center;
+<<<<<<< HEAD
   padding: 25px;
   font-size: 18px;
 }
@@ -98,6 +103,18 @@ a:link {
 .xtnrl-lnk:visited {
   color: black;
 
+=======
+  padding: 30px;
+  font-size: 18px;
+}
+
+.movie-ovrvw > a {
+  
+}
+
+.xtnrl-lnk {
+  color: black;
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
 }
 
 .run-time-txt {
@@ -137,22 +154,32 @@ hr {
   width: 50px;
 }
 
+<<<<<<< HEAD
 #starRating {
   font-size: 20px;
 }
 
+=======
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
 .sgl-movie-img{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 	max-width: 100%;
 	color: black;
+<<<<<<< HEAD
 	width: 280px;
+=======
+	width: 250px;
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
 	transition: 0.3s;
   background-color: #fff44f;
   margin: 10px auto;
   position: relative;
   bottom: 15px;
+<<<<<<< HEAD
   animation-name: fadePoster;
   animation-duration: .5s;
+=======
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
 
 }
 
@@ -188,12 +215,19 @@ z-index: 1;
 	max-width: 100%;
   color: black;
   max-height: 400px;
+<<<<<<< HEAD
 	height: 380px;
 	transition: 0.3s;
   background-color: #fff44f;
   margin: 65px 40px;
   animation-name: fadePoster;
   animation-duration: .5s;
+=======
+	height: 370px;
+	transition: 0.3s;
+  background-color: #fff44f;
+  margin: 65px 30px;
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
 }
 
 
@@ -209,6 +243,7 @@ z-index: 1;
   border: none !important;
 }
 
+<<<<<<< HEAD
 @keyframes fadePoster {
   from {
     opacity: 0;
@@ -218,16 +253,25 @@ z-index: 1;
 }
 
 
+=======
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
 .movie-img {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 	max-width: 100%;
 	color: black;
+<<<<<<< HEAD
 	height: 155px;
   background-color: #fff44f;
   margin: 30px 15px;
   animation-name: fadePoster;
   animation-duration: 1s;
   animation-iteration-count: initial;
+=======
+	height: 150px;
+	transition: 0.3s;
+  background-color: #fff44f;
+  margin: 30px 20px;
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
  
 
 }
@@ -281,8 +325,13 @@ input:focus {
 }
 
 @keyframes mymove {
+<<<<<<< HEAD
   from {margin-top: 0px;}
   to {margin-top: 200px;}
+=======
+  from {top: 0px;}
+  to {top: 200px;}
+>>>>>>> 10d03627daa2042fef7fcb9e031bdf3d176949d7
 }
 
 .app-form {
