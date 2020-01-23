@@ -95,25 +95,3 @@ export default class SearchMovie extends React.Component {
       
     }
   }
-
-  /* <div>
-                    <Grid>
-                      <Row>
-                        <Col xs={12} md={12}>
-                        <Link to ={{
-                          pathname: '/movies',
-                          state: {
-                            movie: this.state.movies
-                          }
-                        }}>
-                          {this.state.movies.slice(0, 4).map((movie, index) =>(
-
-                          <img key={index} className="movie-img-results" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Movie Poster Missing"/>
-
-                          ))}
-                        </Link>
-                       
-                        </Col>
-                      </Row>
-                    </Grid>
-                  </div> */
