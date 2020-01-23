@@ -12,8 +12,6 @@ import { faLemon, faUser } from '@fortawesome/free-solid-svg-icons';
 import FooterPage from './components/FooterPage';
 import Movie from './components/Movie';
 import Home from './components/Home';
-import Secret from './components/Secret';
-import withAuth from './withAuth';
 import Upcoming from './components/Upcoming'
 
 
@@ -47,11 +45,6 @@ class App extends Component {
             <NavItem>
             <Link to ="/trending">TRENDING</Link> 
             </NavItem>
-          { /*
-            <NavItem>
-            <Link to ="/secret">SECRET</Link> 
-            </NavItem>
-          */}
             </Nav>
             <Nav pullRight>
             <NavItem eventKey={2} href="#">
@@ -68,7 +61,6 @@ class App extends Component {
               <Route path="/popular" component={Pop} />
               <Route path="/trending" component={Trend} />
               <Route path="/account" component={Account} />
-              <Route path="/secret" component={withAuth(Secret)} />
               <Route exact path="/movie/:id" component={props => <Movie {...props} />} />
             </Switch>
             <FooterPage />

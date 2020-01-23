@@ -70,7 +70,7 @@ export default class SearchMovie extends React.Component {
                 <div>
                   <div>
                     <input type="text" id="movie-title" value={this.state.value} onChange={this.handleChange}/>
-                    <button id="search-btn" type="submit" class="btn-sm"><FontAwesomeIcon icon="search"/></button>
+                    <button id="search-btn" type="submit" className="btn-sm"><FontAwesomeIcon icon="search"/></button>
                   </div>
                 </div>
                 
@@ -95,25 +95,3 @@ export default class SearchMovie extends React.Component {
       
     }
   }
-
-  /* <div>
-                    <Grid>
-                      <Row>
-                        <Col xs={12} md={12}>
-                        <Link to ={{
-                          pathname: '/movies',
-                          state: {
-                            movie: this.state.movies
-                          }
-                        }}>
-                          {this.state.movies.slice(0, 4).map((movie, index) =>(
-
-                          <img key={index} className="movie-img-results" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Movie Poster Missing"/>
-
-                          ))}
-                        </Link>
-                       
-                        </Col>
-                      </Row>
-                    </Grid>
-                  </div> */
